@@ -53,7 +53,15 @@ func Get() (*Config, error) {
 
 func Set(key, value string) error {
 	viper.Set(key, value)
-	return viper.WriteConfig()
+
+	if err := viper.WriteConfig(); err != nil {
+		if _, ok := err.(viper.ConfigFileNotFoundError); ok {
+			cfgPath := filepath.Join(configDir, "config.yaml")
+			return viper.WriteConfigAs(cfgPath)
+		}
+		return err
+	}
+	return nil
 }
 
 func GetHost() string {
