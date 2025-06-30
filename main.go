@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/cryptexctl/teah/cmd"
+	"github.com/cryptexctl/gt/cmd"
 )
 
 func main() {

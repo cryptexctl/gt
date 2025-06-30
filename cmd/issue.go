@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"text/tabwriter"
 
-	"github.com/cryptexctl/teah/api"
+	"github.com/cryptexctl/gt/api"
 	"github.com/spf13/cobra"
 )
 

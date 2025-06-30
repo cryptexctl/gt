@@ -3,7 +3,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/cryptexctl/teah/internal/config"
+	"github.com/cryptexctl/gt/internal/config"
 	"github.com/spf13/cobra"
 )
 

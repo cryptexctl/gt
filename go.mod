@@ -1,4 +1,4 @@
-module github.com/cryptexctl/teah
+module github.com/cryptexctl/gt
 
 go 1.21
 

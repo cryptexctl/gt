@@ -18,15 +18,17 @@ cryptexctl/teah          Gitea CLI              no        no
 ### From source
 
 ```bash
-git clone https://github.com/cryptexctl/teah.git
+git clone https://github.com/cryptexctl/gt
 cd teah-cli
 make build      # binary in bin/gt
 sudo make install  # optional, copies to /usr/local/bin
 ```
 
-### Pre-built binaries
+### Golang
 
-Releases provide archives for Linux, macOS and Windows. Unpack and put `gt` (or `gt.exe`) in your `PATH`.
+```bash
+go install github.com/cryptexctl/gt@latest
+```
 
 ---
 
