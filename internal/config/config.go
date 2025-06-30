@@ -1,7 +1,6 @@
 package config
 
 import (
-	"errors"
 	"os"
 	"path/filepath"
 
@@ -33,12 +32,7 @@ func Init() error {
 	viper.SetEnvPrefix("GT")
 	viper.AutomaticEnv()
 
-	if err := viper.ReadInConfig(); err != nil {
-		var configFileNotFoundError viper.ConfigFileNotFoundError
-		if !errors.As(err, &configFileNotFoundError) {
-			return err
-		}
-	}
+	_ = viper.ReadInConfig()
 
 	return nil
 }
